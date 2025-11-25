@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+*{
+    font-family: "Roboto", sans-serif;
+}
+
+.menu-links {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0e1f51;
+    
+}
+
+#login-btn,
+#signup-btn {
+    font-family: "Raleway", sans-serif;   
+    font-weight: 500;
+    font-size: 16px;  
+}
+
+.hero-btn{
+    font-family: "Roboto", sans-serif;;
+}

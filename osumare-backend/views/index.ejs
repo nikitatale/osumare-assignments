@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Here is Your All Tasks!</h1>
+
+    <div>
+        <a class="new-user-btn" href="http://localhost:8080/tasks/new">
+        + Add New Task
+     </a>
+
+     &nbsp;  &nbsp;
+     </div>
+    
+      <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                    <th>Actions</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% for(let task of tasks) { %>
+                <tr>
+                  
+                    <td><%= task.title %></td>
+                    <td><%= task.description %></td>
+
+                    <td>
+                        <form action="/tasks/<%= task.id %>/edit" method="get">
+                            <button class="edit-btn">Edit</button>
+                        </form>
+                    </td>
+
+                    <td>
+                        <form action="/tasks/<%= task.id %>">
+                            <button class="view-btn">View</button>
+                        </form>
+                    </td>
+
+                    <td>
+                        <form action="/tasks/<%= task.id %>?_method=DELETE" method="POST">
+                            <button>Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+     </table>
+
+
+</body>
+</html>
